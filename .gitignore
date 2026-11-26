@@ -1,0 +1,14 @@
+.dart_tool/
+build/
+Debug/
+Release/
+.gradle/
+.kotlin/
+local.properties
+key.properties
+*.jks
+*.keystore
+*.apk
+*.elf
+*.hex
+.env

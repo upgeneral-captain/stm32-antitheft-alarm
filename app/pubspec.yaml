@@ -1,0 +1,50 @@
+name: alarm_app
+description: "STM32 防盗报警器配套 App —— 老年友好、单机使用"
+publish_to: 'none'
+version: 1.0.1+2
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # MQTT 客户端
+  mqtt_client: ^10.0.0
+
+  # 本地存储
+  shared_preferences: ^2.3.0
+
+  # 报警：本地通知 + 震动
+  flutter_local_notifications: ^18.0.1
+  vibration: ^2.0.0
+
+  # 报警音（循环播放 WAV）
+  audioplayers: ^6.1.0
+
+  # 一键导航 / 打开地图
+  url_launcher: ^6.3.0
+
+  # 时间格式化
+  intl: ^0.20.2
+
+  # 高德地图（本地化版本，见 packages/ 目录，已放开 Dart 3 约束）
+  amap_flutter_map:
+    path: packages/amap_flutter_map
+  amap_flutter_base:
+    path: packages/amap_flutter_base
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/

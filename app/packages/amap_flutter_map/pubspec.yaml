@@ -1,0 +1,33 @@
+name: amap_flutter_map
+description: AMap Flutter Map plugin (local fork, Dart 3 compatible)
+version: 3.0.0
+homepage: https://lbs.amap.com/
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_plugin_android_lifecycle: ^2.0.1
+  meta: ^1.3.0
+  plugin_platform_interface: ^2.0.0
+  stream_transform: ^2.0.0
+  amap_flutter_base:
+    path: ../amap_flutter_base
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.amap.flutter.map
+        pluginClass: AMapFlutterMapPlugin
+      ios:
+        pluginClass: AMapFlutterMapPlugin
+  assets:
+    - res/
